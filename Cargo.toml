@@ -1,0 +1,15 @@
+[package]
+name = "genius_lyrics"
+version = "1.0.2"
+edition = "2018"
+license-file = "LICENSE"
+description = "Fetches lyrics of song from genius by it's URL"
+repository = "https://github.com/dinaraparanid/genius_lyrics"
+readme = "README.md"
+
+[dependencies]
+reqwest = { version = "0.11.7", features = ["blocking"] }
+scraper = "0.12.0"
+html2text = "0.2.1"
+regex = "1.5.4"
+tokio = { version = "1", features = ["full"] }
