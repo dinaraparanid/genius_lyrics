@@ -15,7 +15,7 @@ pub enum GetLyricsError {
 }
 
 #[inline]
-fn get_lyrics_from_doc(doc: &str) -> std::result::Result<String, GetLyricsError> {
+fn get_lyrics_from_doc(doc: &str) -> Result<String, GetLyricsError> {
     Ok(Regex::new(r"\[\d*]|/.*|[\[\]]|https:.*")
         .unwrap()
         .replace_all(
@@ -61,7 +61,7 @@ fn get_lyrics_from_doc(doc: &str) -> std::result::Result<String, GetLyricsError>
 ///
 
 #[inline]
-pub async fn get_lyrics_from_url(url: &str) -> std::result::Result<String, GetLyricsError> {
+pub async fn get_lyrics_from_url(url: &str) -> Result<String, GetLyricsError> {
     get_lyrics_from_doc(
         match reqwest::get(url).await {
             Ok(x) => x,
@@ -88,7 +88,7 @@ pub async fn get_lyrics_from_url(url: &str) -> std::result::Result<String, GetLy
 ///
 
 #[inline]
-pub fn get_lyrics_from_url_blocking(url: &str) -> std::result::Result<String, GetLyricsError> {
+pub fn get_lyrics_from_url_blocking(url: &str) -> Result<String, GetLyricsError> {
     get_lyrics_from_doc(
         match reqwest::blocking::get(url) {
             Ok(x) => x,
