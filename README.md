@@ -4,9 +4,12 @@
 ![crates.io](https://img.shields.io/crates/v/genius_lyrics.svg)
 [![Rust](https://img.shields.io/badge/rust-1.73.0-orange.svg?logo=rust)](https://www.rust-lang.org)
 
+## **Developer**
+[Paranid5](https://github.com/dinaraparanid)
+
 Fetches lyrics of song from genius by it's URL
 
-# Example
+# **Example**
 
 ```Rust
 extern crate tokio;
