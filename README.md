@@ -7,9 +7,11 @@
 ## **Developer**
 [Paranid5](https://github.com/dinaraparanid)
 
-Fetches lyrics of song from genius by it's URL
+## **About Library**
 
-# **Example**
+Fetches lyrics of songs from Genius by it's URL
+
+### **Example**
 
 ```Rust
 extern crate tokio;
